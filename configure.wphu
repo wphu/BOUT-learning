@@ -1,0 +1,1 @@
+./configure --with-fftw=${fftw} --with-hdf5=${hdf5_dir}/bin/h5cc --with-netcdf=${netcdf_dir} --with-sundials=${sundials_dir} --with-petsc=${petsc_dir}

@@ -1,0 +1,197 @@
+append = false
+async_send = false
+case-01 = true  # not used , from: Command line
+d = true  # not used , from: Command line
+datadir = case-01
+dump_format = nc
+dump_on_restart = true
+incintshear = false
+mxg = 0
+myg = 2
+mz = 1
+non_uniform = true
+nout = 100
+optionfile = BOUT.inp  # not used , from: 
+periodicx = false
+restart = false
+restart_format = nc
+settingsfile = BOUT.settings
+stopcheck = false
+timestep = 5000.
+twistshift = false
+wall_limit = -1.00000000000000000e+00
+zmax = 1.00000000000000000e+00
+zmin = 0.00000000000000000e+00
+
+[all]
+bndry_all = neumann_o2
+evolve_bndry = false
+scale = 0.0  # not used , from: case-01/BOUT.inp
+
+[ddy]
+first = c2  # not used , from: case-01/BOUT.inp
+second = c2  # not used , from: case-01/BOUT.inp
+upwind = w3  # not used , from: case-01/BOUT.inp
+
+[mesh]
+area_expansion = 1  # not used , from: case-01/BOUT.inp
+bpxy = 1
+btxy = 0
+bxy = 1
+dx = 1
+dy = length / ny
+hthe = 1
+ixseps1 = -1
+ixseps2 = -1
+length = 25
+length_xpt = length
+maxregionblocksize = 64
+nx = 1
+ny = 200
+paralleltransform = identity
+rxy = 1
+sinty = 0
+staggergrids = false
+symmetricglobalx = true
+symmetricglobaly = true
+type = bout
+ypos = y * length / (2*pi)
+
+[mesh:ddz]
+fft_filter = 0.00000000000000000e+00
+
+[ne]
+evolve_bndry = false
+flux = 4e23
+function = 0.1
+scale = 1
+source = (flux/(mesh:length_xpt))*h(mesh:length_xpt - mesh:ypos)
+
+[nn]
+function = 1e-4  # not used , from: case-01/BOUT.inp
+scale = 1  # not used , from: case-01/BOUT.inp
+
+[nvi]
+bndry_target = dirichlet_o2  # not used , from: case-01/BOUT.inp
+evolve_bndry = false
+function = vtarg * ne:scale * ne:function * y / (2*pi)
+scale = 1
+vtarg = 0.3
+
+[nvn]
+evolve = true
+
+[output]
+enabled = true
+floats = false
+flush = true
+flushfrequency = 1
+guards = true
+init_missing = false
+openclose = true
+parallel = false
+shiftinput = false
+shiftoutput = false
+
+[p]
+evolve_bndry = false
+function = 0.1
+powerflux = 2e7
+scale = 1
+source = (powerflux*2/3 / (mesh:length_xpt))*h(mesh:length_xpt - mesh:ypos)
+
+[pn]
+evolve = true
+function = nn:scale * nn:function * pn:tstart / sd1d:tnorm  # not used , from: case-01/BOUT.inp
+scale = 1.0  # not used , from: case-01/BOUT.inp
+tstart = 3.5  # not used , from: case-01/BOUT.inp
+
+[restart]
+enabled = true
+floats = false
+flush = true
+flushfrequency = 1
+guards = true
+init_missing = false
+openclose = true
+parallel = false
+shiftinput = false
+shiftoutput = false
+
+[sd1d]
+aa = 2.0
+adpar = -1
+anomalous_chi = -1.00000000000000000e+00
+anomalous_d = -1.00000000000000000e+00
+area = 1
+atomic = false
+bndry_flux_fix = false
+bnorm = 1.0
+cfl_info = false
+charge_exchange = true
+charge_exchange_escape = false
+charge_exchange_return_fe = 1.00000000000000000e+00
+density_controller_i = 1e-3  # not used , from: case-01/BOUT.inp
+density_controller_p = 1e-2  # not used , from: case-01/BOUT.inp
+density_form = 4  # not used , from: case-01/BOUT.inp
+density_sheath = 0
+density_upstream = -1
+diagnose = true
+dneut = 10.0
+eionize = 30
+elastic_scattering = false
+energy_form = 8  # not used , from: case-01/BOUT.inp
+excitation = false
+fimp = -1
+frecycle = 0.9
+fredistribute = 0.0
+gamma_sound = 1.66666666666666674e+00
+gaspuff = 0
+heat_conduction = false
+hyper = -1
+impurity_adas = false
+include_dneut = true
+ion_viscosity = false
+ionisation = true
+momentum_form = 6  # not used , from: case-01/BOUT.inp
+neutral_f_pn = true
+neutral_gamma = 0.
+nloss = 1e3
+nnorm = 1e20
+pressure_sheath = 0
+recombination = true
+redist_weight = h(y - pi)
+sheath_gamma = 6
+split_operator = false
+tn_floor = 3.50000000000000000e+00
+tnorm = 100
+viscos = -0.0001
+volume_source = true
+vwall = 0.0
+
+[solver]
+adams_moulton = false
+atol = 1e-10
+cvode_max_order = -1
+cvode_stability_limit_detection = false
+diagnose = false
+func_iter = false
+max_timestep = -1.00000000000000000e+00
+maxl = 5
+mldq = 9
+mlkeep = 3
+mms = false
+mms_initialise = false
+monitor_timestep = false
+mudq = 9
+mukeep = 3
+mxorder = -1
+mxstep = 100000
+nout = 100
+output_step = 5.00000000000000000e+03
+rtol = 1e-5
+start_timestep = -1.00000000000000000e+00
+type = ""
+use_jacobian = false
+use_precon = false
+use_vector_abstol = false

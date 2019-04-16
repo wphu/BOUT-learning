@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Inputs}{2}
+\contentsline {section}{\numberline {3}Flute-Reduced MHD}{3}
+\contentsline {subsection}{\numberline {3.1}Curvature vector}{4}
+\contentsline {subsection}{\numberline {3.2}Shear-Alfv\'en Law}{4}
+\contentsline {subsection}{\numberline {3.3}Flute reduction}{6}
+\contentsline {subsection}{\numberline {3.4}High-$\beta $ MHD closure}{7}
+\contentsline {subsubsection}{\numberline {3.4.1}Vorticity}{7}
+\contentsline {subsubsection}{\numberline {3.4.2}Magnetic field}{8}
+\contentsline {subsubsection}{\numberline {3.4.3}Pressure}{9}
+\contentsline {subsubsection}{\numberline {3.4.4}Summary}{9}
+\contentsline {subsection}{\numberline {3.5}Normalisation}{10}
+\contentsline {subsubsection}{\numberline {3.5.1}Hazeltine-Meiss}{10}
+\contentsline {subsubsection}{\numberline {3.5.2}BOUT}{11}
+\contentsline {subsubsection}{\numberline {3.5.3}MHD}{11}
+\contentsline {subsection}{\numberline {3.6}Normalisation example}{12}
+\contentsline {subsection}{\numberline {3.7}Dimensionless quantities}{13}
+\contentsline {subsection}{\numberline {3.8}Parallel velocity}{13}
+\contentsline {subsection}{\numberline {3.9}Diamagnetic effects}{15}
+\contentsline {subsection}{\numberline {3.10}Plasma-vacuum interface}{16}

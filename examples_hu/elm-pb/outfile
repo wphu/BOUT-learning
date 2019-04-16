@@ -1,0 +1,488 @@
+begin time
+Thu Apr 27 13:43:49 CST 2017
+job run on :
+cu16
+with job id: 10309.mu01
+end time
+Thu Apr 27 13:43:49 CST 2017
+
+BOUT++ version 3.00
+Revision: Unknown
+MD5 checksum: 116e327471710ec4026e47e996c65453
+Code compiled on Apr 27 2017 at 10:42:02
+
+B.Dudson (University of York), M.Umansky (LLNL) 2007
+Based on BOUT by Xueqiao Xu, 1999
+
+Processor number: 0 of 16
+
+pid: 13195
+
+Compile-time options:
+	Checking enabled, level 2
+	Signal handling enabled
+	PDB support disabled
+	netCDF support enabled
+	Parallel NetCDF support disabled
+	OpenMP parallelisation disabled
+Reading options file data/BOUT.inp
+	Option :append = false  (default)
+	Option :dump_format = nc (data/BOUT.inp)
+	Option :staggergrids = false (data/BOUT.inp)
+Setting X differencing methods
+	First       :  Fourth order central (C4)
+	Second      :  Fourth order central (C4)
+	Upwind      :  Third order WENO (W3)
+	Flux        :  Split into upwind and central (SPLIT)
+Setting Y differencing methods
+	First       :  Fourth order central (C4)
+	Second      :  Fourth order central (C4)
+	Upwind      :  Third order WENO (W3)
+	Flux        :  Split into upwind and central (SPLIT)
+Setting Z differencing methods
+	First       :  Fourth order central (C4)
+	Second      :  Fourth order central (C4)
+	Upwind      :  Third order WENO (W3)
+	Flux        :  Split into upwind and central (SPLIT)
+	Option :grid = data/cbm18_dens8.grid_nx68ny64.nc (data/BOUT.inp)
+
+Getting grid data from file data/cbm18_dens8.grid_nx68ny64.nc
+	Option :format =  (default)
+	Using NetCDF format for file 'data/cbm18_dens8.grid_nx68ny64.nc'
+	Option mesh:type = bout (default)
+	Option mesh:symmetricGlobalX = true   (default)
+	Option mesh:symmetricGlobalY = false  (default)
+	Option mesh:FCI = false  (default)
+Loading mesh
+	Option :mz = 17 (data/BOUT.inp)
+	Grid size: 68 x 64 x 17
+	Option :MXG = 2 (default)
+	Option :MYG = 2 (default)
+	WARNING: Number of inner y points 'ny_inner' not found. Setting to 32
+Finding value for NXPE
+	Candidate value: 1
+	 -> Good value
+	Candidate value: 2
+	 -> Good value
+	Candidate value: 4
+	 -> Good value
+	Candidate value: 8
+	 -> Good value
+	Candidate value: 16
+	 -> Good value
+	Domain split (4, 4) into domains (16, 16)
+	Option :non_uniform = true   (default)
+	Option :twistshift = true (data/BOUT.inp)
+	Option :twistorder = 0 (data/BOUT.inp)
+	Option :shiftorder = 0 (data/BOUT.inp)
+	Option :shiftxderivs = true (data/BOUT.inp)
+	Option :IncIntShear = false  (default)
+	Option :BoundaryOnCell = false  (default)
+	Option :staggergrids = false (data/BOUT.inp)
+	Option :periodicX = false  (default)
+	Option :async_send = false  (default)
+Using shifted X derivatives. Interpolation: FFT
+	Option :zperiod = 15 (data/BOUT.inp)
+Applying Twist-Shift condition. Interpolation: FFT
+	EQUILIBRIUM IS SINGLE NULL (SND) 
+Connection between top of Y processor 3 and bottom of 0 in range 0 <= x < 68
+=> This processor sending in down
+WARNING adding connection: poloidal index -1 out of range
+	MYPE_IN_CORE = 1
+	DXS = 20, DIN = 12. DOUT = -1
+	UXS = 0, UIN = -1. UOUT = 4
+	XIN = -1, XOUT = 1
+	Twist-shift: DI 
+	WARNING: Could not read 'g11' from grid. Setting to 1.000000e+00
+	WARNING: Could not read 'g22' from grid. Setting to 1.000000e+00
+	WARNING: Could not read 'g33' from grid. Setting to 1.000000e+00
+	WARNING: Could not read 'g12' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'g13' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'g23' from grid. Setting to 0.000000e+00
+	Option :twistshift_pf = false  (default)
+	Maximum error in diagonal inversion is 0.000000e+00
+	Maximum error in off-diagonal inversion is 0.000000e+00
+	WARNING: Could not read 'J' from grid. Setting to 0.000000e+00
+	WARNING: Jacobian 'J' not found. Calculating from metric tensor
+	Maximum difference in Bxy is 1.182174e+00
+Calculating differential geometry terms
+	Communicating connection terms
+	WARNING: Could not read 'd2y' from grid. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2y' not found. Calculating from dy
+Boundary regions in this processor: core, 
+	done
+Setting up output (dump) file
+	Option output:parallel = false  (default)
+	Option output:flush = true   (default)
+	Option output:guards = true   (default)
+	Option output:floats = true (default)
+	Option output:openclose = true   (default)
+	Option output:enabled = true   (default)
+	Option output:init_missing = false  (default)
+	Using NetCDF format for file 'data/BOUT.dmp.nc'
+	Option solver:type =  (default)
+	Option :datadir = data
+	Option solver:enablerestart = true   (default)
+	Option :restart = false  (default)
+	Option restart:parallel = false  (default)
+	Option restart:flush = true   (default)
+	Option restart:guards = true   (default)
+	Option restart:floats = false  (default)
+	Option restart:openclose = true   (default)
+	Option restart:enabled = true   (default)
+	Option restart:init_missing = false  (default)
+	Option solver:monitor_timestep = false  (default)
+	Option solver:mms = false  (default)
+	Option solver:mms_initialise = false  (default)
+	Option :restart = false  (default)
+Initialising physics module
+Solving high-beta flute reduced equations
+	File    : elm_pb.cxx
+	Compiled: Apr 27 2017 at 10:44:26
+	Reading contravariant vector bxcv
+	Option highbeta:constn0 = true   (default)
+	Option highbeta:n0_fake_prof = false  (default)
+	Option highbeta:n0_height = 0.4 (default)
+	Option highbeta:n0_ave = 0.01 (default)
+	Option highbeta:n0_width = 0.1 (default)
+	Option highbeta:n0_center = 0.633 (default)
+	Option highbeta:n0_bottom_x = 0.81 (default)
+	Option highbeta:T0_fake_prof = false  (default)
+	Option highbeta:Tconst = -1 (default)
+	Option highbeta:density = 1e+19 (data/BOUT.inp)
+	Option highbeta:evolve_jpar = false (data/BOUT.inp)
+	Option highbeta:phi_constraint = false (data/BOUT.inp)
+	Option highbeta:include_curvature = true (data/BOUT.inp)
+	Option highbeta:include_jpar0 = true (data/BOUT.inp)
+	Option highbeta:evolve_pressure = true (data/BOUT.inp)
+	Option highbeta:compress0 = false  (default)
+	Option highbeta:gyroviscous = false  (default)
+	Option highbeta:nonlinear = false (data/BOUT.inp)
+	Option highbeta:bm_exb_flag = 0 (data/BOUT.inp)
+	Brackets for ExB: default differencing
+	Option highbeta:bm_mag_flag = 2 (data/BOUT.inp)
+	Brackets: Arakawa scheme
+	Option highbeta:ehall = false (data/BOUT.inp)
+	Option highbeta:aa = 2 (data/BOUT.inp)
+	Option highbeta:diamag = true (data/BOUT.inp)
+	Option highbeta:diamag_grad_t = false (data/BOUT.inp)
+	Option highbeta:diamag_phi0 = true (data/BOUT.inp)
+	Option highbeta:dia_fact = 1 (default)
+	Option highbeta:withflow = false (data/BOUT.inp)
+	Option highbeta:k_h_term = false (data/BOUT.inp)
+	Option highbeta:d_0 = 130000 (data/BOUT.inp)
+	Option highbeta:d_s = 20 (data/BOUT.inp)
+	Option highbeta:x0 = 0.855 (data/BOUT.inp)
+	Option highbeta:sign = -1 (data/BOUT.inp)
+	Option highbeta:d_min = 3000 (data/BOUT.inp)
+	Option highbeta:experiment_Er = false  (default)
+	Option highbeta:noshear = false (data/BOUT.inp)
+	Option highbeta:relax_j_vac = false (data/BOUT.inp)
+	Option highbeta:relax_j_tconst = 0.01 (data/BOUT.inp)
+	Option highbeta:filter_z = true (data/BOUT.inp)
+	Option highbeta:filter_z_mode = 1 (data/BOUT.inp)
+	Option highbeta:low_pass_z = 16 (data/BOUT.inp)
+	Option highbeta:zonal_flow = 0 (data/BOUT.inp)
+	Option highbeta:zonal_field = 0 (data/BOUT.inp)
+	Option highbeta:zonal_bkgd = -1 (data/BOUT.inp)
+	Option highbeta:smooth_j_x = true (data/BOUT.inp)
+	Option highbeta:jpar_bndry_width = -1 (default)
+	Option highbeta:sheath_boundaries = false  (default)
+	Option highbeta:parallel_lr_diff = false  (default)
+	Option highbeta:parallel_lagrange = false  (default)
+	Option highbeta:parallel_project = false  (default)
+	Option highbeta:include_rmp = false (data/BOUT.inp)
+	Option highbeta:simple_rmp = false (data/BOUT.inp)
+	Option highbeta:rmp_factor = 0.0001 (data/BOUT.inp)
+	Option highbeta:rmp_ramp = 0.0001 (data/BOUT.inp)
+	Option highbeta:rmp_freq = -1 (default)
+	Option highbeta:rmp_rotate = 0 (default)
+	Option highbeta:vacuum_pressure = 0.02 (data/BOUT.inp)
+	Option highbeta:vacuum_trans = 0.01 (data/BOUT.inp)
+	Option highbeta:vac_lund = -1e+08 (data/BOUT.inp)
+	Option highbeta:core_lund = -1e+08 (data/BOUT.inp)
+	Option highbeta:hyperresist = -0.0001 (data/BOUT.inp)
+	Option highbeta:ehyperviscos = -1 (default)
+	Option highbeta:spitzer_resist = false  (default)
+	Option highbeta:Zeff = 2 (default)
+	Option highbeta:damp_width = -1 (data/BOUT.inp)
+	Option highbeta:damp_t_const = 0.01 (data/BOUT.inp)
+	Option highbeta:viscos_par = -0.1 (data/BOUT.inp)
+	Option highbeta:viscos_perp = -1 (data/BOUT.inp)
+	Option highbeta:hyperviscos = -1 (data/BOUT.inp)
+	Option highbeta:diffusion_par = -1 (data/BOUT.inp)
+	Option highbeta:diffusion_p4 = -1e-05 (data/BOUT.inp)
+	Option highbeta:diffusion_u4 = 1e-05 (data/BOUT.inp)
+	Option highbeta:diffusion_a4 = -1e-05 (data/BOUT.inp)
+	Option highbeta:heating_p = -1 (data/BOUT.inp)
+	Option highbeta:hp_width = 0.1 (data/BOUT.inp)
+	Option highbeta:hp_length = 0.3 (data/BOUT.inp)
+	Option highbeta:sink_p = -1 (data/BOUT.inp)
+	Option highbeta:sp_width = 0.04 (data/BOUT.inp)
+	Option highbeta:sp_length = 0.15 (data/BOUT.inp)
+	Option highbeta:sink_ul = -10 (data/BOUT.inp)
+	Option highbeta:su_widthl = 0.06 (data/BOUT.inp)
+	Option highbeta:su_lengthl = 0.1 (data/BOUT.inp)
+	Option highbeta:sink_ur = -10 (data/BOUT.inp)
+	Option highbeta:su_widthr = 0.06 (data/BOUT.inp)
+	Option highbeta:su_lengthr = 0.1 (data/BOUT.inp)
+	Option highbeta:phi_curv = true (data/BOUT.inp)
+	Option highbeta:gamma = 1.66667 (default)
+	Option highbeta:phi_flags = 769 (data/BOUT.inp)
+	Option highbeta:apar_flags = 769 (data/BOUT.inp)
+Normalisations: Bbar = 1.941299e+00 T   Lbar = 3.497172e+00 m
+                Va = 9.468397e+06 m/s   Tbar = 3.693521e-07 s
+                dnorm = 1.456118e-02
+    Resistivity
+        Vacuum  - Zero resistivity -
+        Core    - Zero resistivity -
+    diffusion_u4: 1.000000e-05
+   drop K-H term
+Calculating differential geometry terms
+	Communicating connection terms
+Setting boundary for variable U
+	core region: 	Option all:bndry_all = dirichlet_o2 (data/BOUT.inp)
+
+Initial profile global options
+	Option :twistshift = true (data/BOUT.inp)
+	Option :Ballooning = true   (default)
+	Option :ShiftInitial = false  (default)
+
+Setting initial value of U
+	Option u:scale = 1e-05 (data/BOUT.inp)
+	Option all:xs_opt = 1 (data/BOUT.inp)
+	Option all:ys_opt = 1 (data/BOUT.inp)
+	Option all:zs_opt = 2 (data/BOUT.inp)
+	Option all:xs_mode = 4 (default)
+	Option all:ys_mode = 4 (default)
+	Option all:zs_mode = 1 (data/BOUT.inp)
+	Option all:xs_phase = 0 (default)
+	Option all:ys_phase = 0 (default)
+	Option all:zs_phase = 0 (default)
+	Option all:xs_s0 = 0.5 (data/BOUT.inp)
+	Option all:ys_s0 = 0.5 (data/BOUT.inp)
+	Option all:zs_s0 = 0.5 (default)
+	Option all:xs_wd = 0.1 (data/BOUT.inp)
+	Option all:ys_wd = 0.3 (data/BOUT.inp)
+	Option all:zs_wd = 0.2 (default)
+
+	Option all:evolve_bndry = false  (default)
+	Option u:evolve_bndry = false  (default)
+Setting boundary for variable P
+	core region: 	Option p:bndry_core = neumann (data/BOUT.inp)
+
+Setting initial value of P
+	Option all:scale = 0 (data/BOUT.inp)
+	Option all:xs_opt = 1 (data/BOUT.inp)
+	Option all:ys_opt = 1 (data/BOUT.inp)
+	Option all:zs_opt = 2 (data/BOUT.inp)
+	Option all:xs_mode = 4 (default)
+	Option all:ys_mode = 4 (default)
+	Option all:zs_mode = 1 (data/BOUT.inp)
+	Option all:xs_phase = 0 (default)
+	Option all:ys_phase = 0 (default)
+	Option all:zs_phase = 0 (default)
+	Option all:xs_s0 = 0.5 (data/BOUT.inp)
+	Option all:ys_s0 = 0.5 (data/BOUT.inp)
+	Option all:zs_s0 = 0.5 (default)
+	Option all:xs_wd = 0.1 (data/BOUT.inp)
+	Option all:ys_wd = 0.3 (data/BOUT.inp)
+	Option all:zs_wd = 0.2 (default)
+
+	Option all:evolve_bndry = false  (default)
+	Option p:evolve_bndry = false  (default)
+Solving for Psi, Differentiating to get jpar
+Setting boundary for variable Psi
+	core region: 	Option psi:bndry_xin = zerolaplace (data/BOUT.inp)
+
+Setting initial value of Psi
+	Option all:scale = 0 (data/BOUT.inp)
+	Option all:xs_opt = 1 (data/BOUT.inp)
+	Option all:ys_opt = 1 (data/BOUT.inp)
+	Option all:zs_opt = 2 (data/BOUT.inp)
+	Option all:xs_mode = 4 (default)
+	Option all:ys_mode = 4 (default)
+	Option all:zs_mode = 1 (data/BOUT.inp)
+	Option all:xs_phase = 0 (default)
+	Option all:ys_phase = 0 (default)
+	Option all:zs_phase = 0 (default)
+	Option all:xs_s0 = 0.5 (data/BOUT.inp)
+	Option all:ys_s0 = 0.5 (data/BOUT.inp)
+	Option all:zs_s0 = 0.5 (default)
+	Option all:xs_wd = 0.1 (data/BOUT.inp)
+	Option all:ys_wd = 0.3 (data/BOUT.inp)
+	Option all:zs_wd = 0.2 (default)
+
+	Option all:evolve_bndry = false  (default)
+	Option psi:evolve_bndry = false  (default)
+	Option fft:fft_measure = true (data/BOUT.inp)
+	Option laplace:type = spt (default)
+Initialising Laplacian inversion routines
+	Option laplace:async = true   (default)
+	Option laplace:filter = 0 (default)
+	Option laplace:maxmode = 8 (default)
+	Option laplace:low_mem = false  (default)
+	Option laplace:nonuniform = false  (default)
+	Option laplace:all_terms = true   (default)
+	Option laplace:global_flags = 0 (default)
+	Option laplace:inner_boundary_flags = 0 (default)
+	Option laplace:outer_boundary_flags = 0 (default)
+	Option laplace:include_yguards = true   (default)
+	Option laplace:extra_yguards_lower = 0 (default)
+	Option laplace:extra_yguards_upper = 0 (default)
+Setting boundary for variable phi
+	core region: 	Option phi:bndry_xin = none (data/BOUT.inp)
+
+Setting boundary for variable U
+	core region: 	Option all:bndry_all = dirichlet_o2 (data/BOUT.inp)
+
+Setting boundary for variable P
+	core region: 	Option p:bndry_core = neumann (data/BOUT.inp)
+
+Setting boundary for variable J
+	core region: 	Option j:bndry_core = neumann (data/BOUT.inp)
+
+Setting boundary for variable J
+	core region: 	Option j:bndry_core = neumann (data/BOUT.inp)
+
+Setting boundary for variable J
+	core region: 	Option j:bndry_core = neumann (data/BOUT.inp)
+
+	Option :nout = 100 (data/BOUT.inp)
+	Option :timestep = 1 (data/BOUT.inp)
+	Option :append = false  (default)
+	Option :dump_on_restart = true   (default)
+	Option solver:NOUT = 100 (default)
+	Option solver:output_step = 1 (default)
+Solver running for 100 outputs with output timestep of 1.000000e+00
+Initialising solver
+	Option solver:archive = -1 (default)
+	Option solver:dump_format = nc (default)
+	Option solver:restart_format = nc (default)
+	Using NetCDF format for file 'data/BOUT.restart.nc'
+Initialising PVODE solver
+	Boundary region inner X
+	3d fields = 3, 2d fields = 0 neq=196608, local_N=12288
+	Option solver:mudq = 54 (default)
+	Option solver:mldq = 54 (default)
+	Option solver:mukeep = 0 (default)
+	Option solver:mlkeep = 0 (default)
+	Option solver:atol = 1e-08 (data/BOUT.inp)
+	Option solver:rtol = 1e-05 (data/BOUT.inp)
+	Option solver:use_precon = false (data/BOUT.inp)
+	Option solver:precon_dimens = 50 (default)
+	Option solver:precon_tol = 0.0001 (default)
+	Option solver:mxstep = 5000 (data/BOUT.inp)
+Running simulation
+
+
+Run started at  : Thu Apr 27 13:43:50 2017
+
+	Option :wall_limit = 1.55 (data/BOUT.inp)
+Sim Time  |  RHS evals  | Wall Time |  Calc    Inv   Comm    I/O   SOLVER
+
+0.000e+00          2       5.09e-02   -89.2   13.4  159.2   30.9  -14.3
+|  Step 1 of 100. Elapsed 0:00:00.1 ETA 0:00:05.0 Wall 1:32:59.91.000e+00         43       8.62e-01    80.6    7.9    2.7    3.9    4.9
+/  Step 1 of 100. Elapsed 0:00:00.9 ETA 0:01:25.3 Wall 1:32:59.12.000e+00         30       5.90e-01    80.2    7.8    2.7    3.9    5.3
+-  Step 2 of 100. Elapsed 0:00:01.5 ETA 0:00:57.8 Wall 1:32:58.53.000e+00         30       5.97e-01    79.3    7.7    2.7    3.7    6.6
+\  Step 3 of 100. Elapsed 0:00:02.1 ETA 0:00:57.9 Wall 1:32:57.94.000e+00         30       6.39e-01    73.6    7.6    2.7    5.2   10.9
+|  Step 4 of 100. Elapsed 0:00:02.7 ETA 0:01:01.4 Wall 1:32:57.35.000e+00         31       6.69e-01    73.5    7.1    2.4    9.7    7.3
+/  Step 5 of 100. Elapsed 0:00:03.4 ETA 0:01:03.6 Wall 1:32:56.66.000e+00         30       9.56e-01    48.0    9.0   19.8    7.0   16.2
+-  Step 6 of 100. Elapsed 0:00:04.4 ETA 0:01:29.8 Wall 1:32:55.67.000e+00         30       6.23e-01    76.6    7.5    2.4    8.7    4.8
+\  Step 7 of 100. Elapsed 0:00:05.0 ETA 0:00:57.9 Wall 1:32:55.08.000e+00         31       7.12e-01    66.5    9.6    5.9   10.7    7.3
+|  Step 8 of 100. Elapsed 0:00:05.7 ETA 0:01:05.5 Wall 1:32:54.39.000e+00         31       8.11e-01    60.7    5.9   12.1    8.6   12.7
+/  Step 9 of 100. Elapsed 0:00:06.5 ETA 0:01:13.8 Wall 1:32:53.51.000e+01         22       5.09e-01    68.6    6.6    2.2   18.1    4.5
+-  Step 10 of 100. Elapsed 0:00:07.0 ETA 0:00:45.8 Wall 1:32:53.01.100e+01         31       6.66e-01    74.1    7.2    2.4   12.2    4.1
+\  Step 11 of 100. Elapsed 0:00:07.7 ETA 0:00:59.3 Wall 1:32:52.31.200e+01         31       7.01e-01    70.3    6.7    2.2   14.8    5.9
+|  Step 12 of 100. Elapsed 0:00:08.4 ETA 0:01:01.7 Wall 1:32:51.61.300e+01         31       6.96e-01    71.0    6.8    2.2   14.7    5.2
+/  Step 13 of 100. Elapsed 0:00:09.1 ETA 0:01:00.6 Wall 1:32:50.91.400e+01         31       7.50e-01    63.2    8.9    4.5   12.7   10.7
+-  Step 14 of 100. Elapsed 0:00:09.8 ETA 0:01:04.5 Wall 1:32:50.21.500e+01         31       6.77e-01    72.8    6.9    3.4   12.0    5.0
+\  Step 15 of 100. Elapsed 0:00:10.5 ETA 0:00:57.6 Wall 1:32:49.51.600e+01         31       6.85e-01    72.1    7.2    2.3   14.1    4.3
+|  Step 16 of 100. Elapsed 0:00:11.2 ETA 0:00:57.5 Wall 1:32:48.81.700e+01         31       9.72e-01    44.7   11.0   16.4   10.3   17.6
+/  Step 17 of 100. Elapsed 0:00:12.2 ETA 0:01:20.7 Wall 1:32:47.81.800e+01         32       1.23e+00    36.4    9.9   14.1    8.4   31.2
+-  Step 18 of 100. Elapsed 0:00:13.4 ETA 0:01:41.0 Wall 1:32:46.61.900e+01         36       7.86e-01    72.7    7.1    2.3   13.5    4.4
+\  Step 19 of 100. Elapsed 0:00:14.2 ETA 0:01:03.6 Wall 1:32:45.82.000e+01         27       6.91e-01    48.8   19.5    8.6   12.8   10.3
+|  Step 20 of 100. Elapsed 0:00:14.9 ETA 0:00:55.3 Wall 1:32:45.12.100e+01         23       5.87e-01    62.1    6.0    2.2   18.6   11.1
+/  Step 21 of 100. Elapsed 0:00:15.5 ETA 0:00:46.4 Wall 1:32:44.52.200e+01         21       5.24e-01    63.6    6.1    2.0   21.4    6.9
+-  Step 22 of 100. Elapsed 0:00:16.0 ETA 0:00:40.8 Wall 1:32:44.02.300e+01         23       5.24e-01    69.8    6.7    2.2   13.9    7.5
+\  Step 23 of 100. Elapsed 0:00:16.5 ETA 0:00:40.3 Wall 1:32:43.52.400e+01         36       1.07e+00    47.8   10.2   19.3    4.4   18.3
+|  Step 24 of 100. Elapsed 0:00:17.6 ETA 0:01:21.3 Wall 1:32:42.42.500e+01         32       9.54e-01    44.4   13.5   11.1    7.3   23.8
+/  Step 25 of 100. Elapsed 0:00:18.5 ETA 0:01:11.5 Wall 1:32:41.52.600e+01         35       7.59e-01    72.8    7.0    2.5   13.2    4.5
+-  Step 26 of 100. Elapsed 0:00:19.3 ETA 0:00:56.2 Wall 1:32:40.72.700e+01         45       9.64e-01    73.4    7.4    2.8   11.9    4.7
+\  Step 27 of 100. Elapsed 0:00:20.3 ETA 0:01:10.4 Wall 1:32:39.72.800e+01         37       8.06e-01    72.5    6.9    2.5   13.4    4.6
+|  Step 28 of 100. Elapsed 0:00:21.1 ETA 0:00:58.0 Wall 1:32:38.92.900e+01         38       1.24e+00    43.6    9.3   17.8    8.6   20.7
+/  Step 29 of 100. Elapsed 0:00:22.3 ETA 0:01:28.3 Wall 1:32:37.73.000e+01         54       1.16e+00    73.6    7.0    2.6    8.3    8.6
+-  Step 30 of 100. Elapsed 0:00:23.5 ETA 0:01:21.3 Wall 1:32:36.53.100e+01         43       9.55e-01    71.6    6.9    6.5    7.4    7.6
+\  Step 31 of 100. Elapsed 0:00:24.4 ETA 0:01:05.9 Wall 1:32:35.63.200e+01         40       8.63e-01    73.7    7.2    2.3   10.6    6.2
+|  Step 32 of 100. Elapsed 0:00:25.3 ETA 0:00:58.7 Wall 1:32:34.73.300e+01         50       1.24e+00    60.9   10.2   10.4    7.1   11.4
+/  Step 33 of 100. Elapsed 0:00:26.5 ETA 0:01:23.0 Wall 1:32:33.53.400e+01         50       1.25e+00    61.1    7.8    9.3    7.1   14.7
+-  Step 34 of 100. Elapsed 0:00:27.8 ETA 0:01:22.6 Wall 1:32:32.23.500e+01         50       1.04e+00    75.9    7.2    2.6    7.1    7.2
+\  Step 35 of 100. Elapsed 0:00:28.8 ETA 0:01:07.7 Wall 1:32:31.23.600e+01         56       1.18e+00    75.3    7.3    2.6    9.8    5.0
+|  Step 36 of 100. Elapsed 0:00:30.0 ETA 0:01:15.5 Wall 1:32:30.03.700e+01         56       1.19e+00    74.1    7.3    2.6   10.8    5.1
+/  Step 37 of 100. Elapsed 0:00:31.2 ETA 0:01:15.1 Wall 1:32:28.83.800e+01         61       1.36e+00    71.1    6.9    2.5   13.6    6.0
+-  Step 38 of 100. Elapsed 0:00:32.5 ETA 0:01:24.1 Wall 1:32:27.53.900e+01         56       1.14e+00    77.6    7.5    2.8    7.0    5.1
+\  Step 39 of 100. Elapsed 0:00:33.7 ETA 0:01:09.7 Wall 1:32:26.34.000e+01         56       1.13e+00    78.3    7.6    2.7    6.5    4.9
+|  Step 40 of 100. Elapsed 0:00:34.8 ETA 0:01:08.0 Wall 1:32:25.24.100e+01         63       1.36e+00    72.0    8.6    4.6    6.6    8.2
+/  Step 41 of 100. Elapsed 0:00:36.2 ETA 0:01:20.2 Wall 1:32:23.84.200e+01         67       1.36e+00    78.1    7.5    2.6    6.9    5.0
+-  Step 42 of 100. Elapsed 0:00:37.5 ETA 0:01:18.9 Wall 1:32:22.54.300e+01         61       1.28e+00    75.9    7.2    2.4    9.6    4.9
+\  Step 43 of 100. Elapsed 0:00:38.8 ETA 0:01:12.8 Wall 1:32:21.24.400e+01         67       1.42e+00    74.3    7.2    5.2    6.5    6.8
+|  Step 44 of 100. Elapsed 0:00:40.2 ETA 0:01:19.8 Wall 1:32:19.84.500e+01         82       1.73e+00    74.3    7.4    2.8    7.8    7.6
+/  Step 45 of 100. Elapsed 0:00:42.0 ETA 0:01:35.4 Wall 1:32:18.04.600e+01         76       1.50e+00    80.5    7.7    2.5    3.3    5.9
+-  Step 46 of 100. Elapsed 0:00:43.5 ETA 0:01:20.9 Wall 1:32:16.54.700e+01         77       1.53e+00    80.2    7.7    2.5    3.7    5.8
+\  Step 47 of 100. Elapsed 0:00:45.0 ETA 0:01:20.8 Wall 1:32:15.04.800e+01         77       1.50e+00    81.4    7.9    2.6    3.5    4.7
+|  Step 48 of 100. Elapsed 0:00:46.5 ETA 0:01:18.0 Wall 1:32:13.54.900e+01         78       1.60e+00    77.2    7.4    2.4    5.8    7.1
+/  Step 49 of 100. Elapsed 0:00:48.1 ETA 0:01:21.6 Wall 1:32:11.95.000e+01         74       1.54e+00    76.4    7.4    2.4    8.2    5.6
+-  Step 50 of 100. Elapsed 0:00:49.6 ETA 0:01:16.9 Wall 1:32:10.45.100e+01         78       1.58e+00    78.7    7.5    2.7    6.0    5.1
+\  Step 51 of 100. Elapsed 0:00:51.2 ETA 0:01:17.2 Wall 1:32:08.85.200e+01         82       1.90e+00    68.2    6.7   11.7    2.7   10.6
+|  Step 52 of 100. Elapsed 0:00:53.1 ETA 0:01:31.2 Wall 1:32:06.95.300e+01         86       1.83e+00    73.6    8.2    3.0    6.4    8.9
+/  Step 53 of 100. Elapsed 0:00:54.9 ETA 0:01:25.9 Wall 1:32:05.15.400e+01         75       1.51e+00    78.4    7.8    2.7    5.4    5.6
+-  Step 54 of 100. Elapsed 0:00:56.4 ETA 0:01:09.3 Wall 1:32:03.65.500e+01         70       1.42e+00    78.2    7.5    2.5    5.6    6.2
+\  Step 55 of 100. Elapsed 0:00:57.9 ETA 0:01:04.0 Wall 1:32:02.15.600e+01         71       1.46e+00    76.9    7.4    3.5    4.7    7.4
+|  Step 56 of 100. Elapsed 0:00:59.3 ETA 0:01:04.5 Wall 1:32:00.75.700e+01         72       1.64e+00    67.7    9.2    5.5    7.0   10.6
+/  Step 57 of 100. Elapsed 0:01:01.0 ETA 0:01:10.5 Wall 1:31:59.05.800e+01         73       1.50e+00    77.3    7.3    2.4    8.1    4.9
+-  Step 58 of 100. Elapsed 0:01:02.5 ETA 0:01:03.0 Wall 1:31:57.55.900e+01         75       1.53e+00    77.8    7.4    2.4    7.1    5.3
+\  Step 59 of 100. Elapsed 0:01:04.0 ETA 0:01:02.7 Wall 1:31:56.06.000e+01         73       1.50e+00    77.1    7.3    2.5    7.5    5.6
+|  Step 60 of 100. Elapsed 0:01:05.5 ETA 0:01:00.1 Wall 1:31:54.56.100e+01         70       1.49e+00    74.9    7.2    2.4   10.1    5.5
+/  Step 61 of 100. Elapsed 0:01:07.0 ETA 0:00:58.0 Wall 1:31:53.06.200e+01         79       1.57e+00    79.2    7.8    2.9    4.4    5.6
+-  Step 62 of 100. Elapsed 0:01:08.6 ETA 0:00:59.7 Wall 1:31:51.46.300e+01         73       1.58e+00    71.6    8.5    7.7    4.8    7.4
+\  Step 63 of 100. Elapsed 0:01:10.1 ETA 0:00:58.3 Wall 1:31:49.96.400e+01         83       1.65e+00    79.4    7.8    3.0    4.4    5.4
+|  Step 64 of 100. Elapsed 0:01:11.8 ETA 0:00:59.3 Wall 1:31:48.26.500e+01         86       1.77e+00    76.5    7.6    2.9    6.3    6.6
+/  Step 65 of 100. Elapsed 0:01:13.6 ETA 0:01:01.9 Wall 1:31:46.46.600e+01         83       1.75e+00    75.0    7.4    2.7    9.7    5.2
+-  Step 66 of 100. Elapsed 0:01:15.3 ETA 0:00:59.3 Wall 1:31:44.76.700e+01         85       1.73e+00    78.2    7.7    2.5    6.3    5.4
+\  Step 67 of 100. Elapsed 0:01:17.0 ETA 0:00:57.1 Wall 1:31:43.06.800e+01         98       1.96e+00    79.4    7.6    2.5    4.6    6.0
+|  Step 68 of 100. Elapsed 0:01:19.0 ETA 0:01:02.7 Wall 1:31:41.06.900e+01         96       1.93e+00    78.6    7.8    2.9    3.1    7.6
+/  Step 69 of 100. Elapsed 0:01:20.9 ETA 0:00:59.7 Wall 1:31:39.17.000e+01        100       1.97e+00    80.8    7.7    2.5    4.1    4.9
+-  Step 70 of 100. Elapsed 0:01:22.9 ETA 0:00:59.0 Wall 1:31:37.17.100e+01         96       1.91e+00    79.0    7.9    2.9    5.2    5.0
+\  Step 71 of 100. Elapsed 0:01:24.8 ETA 0:00:55.5 Wall 1:31:35.27.200e+01         98       1.94e+00    79.8    7.8    2.7    3.9    5.8
+|  Step 72 of 100. Elapsed 0:01:26.7 ETA 0:00:54.2 Wall 1:31:33.37.300e+01         96       1.92e+00    79.2    7.5    2.6    4.5    6.1
+/  Step 73 of 100. Elapsed 0:01:28.6 ETA 0:00:51.7 Wall 1:31:31.47.400e+01         97       1.97e+00    77.1    7.9    2.9    5.0    7.1
+-  Step 74 of 100. Elapsed 0:01:30.6 ETA 0:00:51.3 Wall 1:31:29.47.500e+01         91       1.89e+00    76.1    7.2    2.6    7.5    6.6
+\  Step 75 of 100. Elapsed 0:01:32.5 ETA 0:00:47.4 Wall 1:31:27.57.600e+01         95       1.92e+00    78.8    7.5    2.4    5.7    5.5
+|  Step 76 of 100. Elapsed 0:01:34.4 ETA 0:00:46.0 Wall 1:31:25.67.700e+01         97       1.93e+00    80.0    7.8    2.5    2.7    6.9
+/  Step 77 of 100. Elapsed 0:01:36.4 ETA 0:00:44.3 Wall 1:31:23.67.800e+01        105       2.08e+00    80.2    7.7    2.6    4.3    5.2
+-  Step 78 of 100. Elapsed 0:01:38.4 ETA 0:00:45.7 Wall 1:31:21.67.900e+01        102       2.02e+00    80.1    7.7    2.6    4.3    5.3
+\  Step 79 of 100. Elapsed 0:01:40.5 ETA 0:00:42.5 Wall 1:31:19.58.000e+01        121       2.44e+00    78.1    8.4    3.5    3.2    6.7
+|  Step 80 of 100. Elapsed 0:01:42.9 ETA 0:00:48.8 Wall 1:31:17.18.100e+01        111       2.18e+00    80.7    7.6    2.6    3.9    5.2
+/  Step 81 of 100. Elapsed 0:01:45.1 ETA 0:00:41.5 Wall 1:31:14.98.200e+01        112       2.38e+00    73.5    7.9    6.3    3.0    9.4
+-  Step 82 of 100. Elapsed 0:01:47.5 ETA 0:00:42.9 Wall 1:31:12.58.300e+01        122       2.51e+00    76.4    8.2    3.6    5.2    6.6
+\  Step 83 of 100. Elapsed 0:01:50.0 ETA 0:00:42.7 Wall 1:31:10.08.400e+01        118       2.35e+00    79.7    7.6    2.5    5.2    5.0
+|  Step 84 of 100. Elapsed 0:01:52.3 ETA 0:00:37.6 Wall 1:31:07.78.500e+01        124       2.46e+00    80.2    7.8    2.5    3.8    5.7
+/  Step 85 of 100. Elapsed 0:01:54.8 ETA 0:00:36.9 Wall 1:31:05.28.600e+01        112       2.19e+00    80.8    7.6    2.6    3.6    5.4
+-  Step 86 of 100. Elapsed 0:01:57.0 ETA 0:00:30.7 Wall 1:31:03.08.700e+01        104       2.08e+00    78.6    7.8    2.9    2.5    8.2
+\  Step 87 of 100. Elapsed 0:01:59.1 ETA 0:00:27.1 Wall 1:31:00.98.800e+01        111       2.22e+00    79.5    7.7    2.5    4.9    5.4
+|  Step 88 of 100. Elapsed 0:02:01.3 ETA 0:00:26.6 Wall 1:30:58.78.900e+01        101       2.04e+00    78.8    7.6    2.5    5.8    5.4
+/  Step 89 of 100. Elapsed 0:02:03.3 ETA 0:00:22.4 Wall 1:30:56.79.000e+01        123       2.59e+00    75.2    7.2    2.4    9.8    5.4
+-  Step 90 of 100. Elapsed 0:02:05.9 ETA 0:00:25.9 Wall 1:30:54.19.100e+01        130       2.70e+00    76.4    7.1    2.4    4.3    9.8
+\  Step 91 of 100. Elapsed 0:02:08.6 ETA 0:00:24.3 Wall 1:30:51.49.200e+01        127       2.67e+00    74.1    8.6    4.8    4.2    8.3
+|  Step 92 of 100. Elapsed 0:02:11.3 ETA 0:00:21.4 Wall 1:30:48.79.300e+01        129       2.80e+00    70.9    8.7    7.4    3.2    9.7
+/  Step 93 of 100. Elapsed 0:02:14.1 ETA 0:00:19.6 Wall 1:30:45.99.400e+01        138       2.69e+00    80.6    8.0    3.1    2.1    6.3
+-  Step 94 of 100. Elapsed 0:02:16.8 ETA 0:00:16.2 Wall 1:30:43.29.500e+01        140       2.72e+00    81.2    7.9    2.8    3.1    5.0
+\  Step 95 of 100. Elapsed 0:02:19.5 ETA 0:00:13.6 Wall 1:30:40.59.600e+01        141       2.80e+00    80.2    7.8    2.5    2.3    7.2
+|  Step 96 of 100. Elapsed 0:02:22.3 ETA 0:00:11.2 Wall 1:30:37.79.700e+01        128       2.54e+00    80.0    7.7    2.6    4.3    5.4
+/  Step 97 of 100. Elapsed 0:02:24.8 ETA 0:00:07.6 Wall 1:30:35.29.800e+01        117       2.32e+00    79.8    7.6    2.6    4.7    5.3
+-  Step 98 of 100. Elapsed 0:02:27.2 ETA 0:00:04.6 Wall 1:30:32.89.900e+01        160       3.18e+00    79.1    8.0    3.0    4.3    5.6
+\  Step 99 of 100. Elapsed 0:02:30.3 ETA 0:00:03.2 Wall 1:30:29.71.000e+02        132       2.59e+00    80.2    8.0    3.0    3.5    5.3
+|  Step 100 of 100. Elapsed 0:02:32.9 ETA 0:00:00.0 Wall 1:30:27.1
+Run finished at  : Thu Apr 27 13:46:23 2017
+
+Run time : 2 m 33 s
