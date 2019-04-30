@@ -1,0 +1,33 @@
+\BOOKMARK [1][-]{section.1}{Model equations}{}% 1
+\BOOKMARK [1][-]{section.25}{Code inputs and outputs}{}% 2
+\BOOKMARK [2][-]{subsection.26}{Input options}{section.25}% 3
+\BOOKMARK [2][-]{subsection.27}{Outputs}{section.25}% 4
+\BOOKMARK [1][-]{section.28}{Conservation properties}{}% 5
+\BOOKMARK [1][-]{section.32}{Collisional terms}{}% 6
+\BOOKMARK [2][-]{subsection.33}{Heat conduction and flux limiter}{section.32}% 7
+\BOOKMARK [2][-]{subsection.39}{Resistivity}{section.32}% 8
+\BOOKMARK [2][-]{subsection.41}{Ion viscosity}{section.32}% 9
+\BOOKMARK [2][-]{subsection.52}{Electron parallel viscosity}{section.32}% 10
+\BOOKMARK [1][-]{section.53}{Electrostatic potential}{}% 11
+\BOOKMARK [1][-]{section.54}{Sheath boundary conditions}{}% 12
+\BOOKMARK [1][-]{section.59}{External sources}{}% 13
+\BOOKMARK [2][-]{subsection.60}{Adaptive sources}{section.59}% 14
+\BOOKMARK [2][-]{subsection.64}{Fixed sources}{section.59}% 15
+\BOOKMARK [1][-]{section.66}{Neutral model}{}% 16
+\BOOKMARK [2][-]{subsection.67}{Diffusive neutral model}{section.66}% 17
+\BOOKMARK [2][-]{subsection.70}{Recycling model}{section.66}% 18
+\BOOKMARK [2][-]{subsection.78}{Fluid neutral model}{section.66}% 19
+\BOOKMARK [2][-]{subsection.83}{Diffusive fluid model}{section.66}% 20
+\BOOKMARK [2][-]{subsection.85}{Transfer terms}{section.66}% 21
+\BOOKMARK [2][-]{subsection.86}{Atomic cross sections}{section.66}% 22
+\BOOKMARK [2][-]{subsection.90}{Impurities}{section.66}% 23
+\BOOKMARK [1][-]{section.92}{Simulation startup procedure}{}% 24
+\BOOKMARK [1][-]{section.99}{Boundary conditions}{}% 25
+\BOOKMARK [2][-]{subsection.101}{Heat flux}{section.99}% 26
+\BOOKMARK [1][-]{section.110}{Numerical dissipation}{}% 27
+\BOOKMARK [1][-]{section.111}{Operators}{}% 28
+\BOOKMARK [1][-]{section.112}{Simulation cases}{}% 29
+\BOOKMARK [2][-]{subsection.113}{2D simulations}{section.112}% 30
+\BOOKMARK [2][-]{subsection.115}{Fluid simulations without EM fields}{section.112}% 31
+\BOOKMARK [2][-]{subsection.117}{axisym}{section.112}% 32
+\BOOKMARK [2][-]{subsection.119}{ISTTOK}{section.112}% 33
